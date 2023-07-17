@@ -68,6 +68,21 @@ body {
   margin-top: 10px;
 }
 
+.email-messages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.alert-message {
+  color: hsl(4, 100%, 67%);
+  display: none;
+  font-size: 12px;
+}
+
 form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -84,6 +99,7 @@ form input {
   border-radius: 5px;
   padding-left: 20px;
   margin-top: 5px;
+  cursor: pointer;
 }
 
 form button {
@@ -94,6 +110,13 @@ form button {
   color: hsl(0, 0%, 100%);
   background-color: hsl(234, 29%, 20%);
   font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: hsl(4, 100%, 67%);
+  -webkit-box-shadow: -1px 19px 22px 0px rgba(255, 97, 86, 0.52);
+          box-shadow: -1px 19px 22px 0px rgba(255, 97, 86, 0.52);
 }
 
 .pop-up-modal .column-2 img {
@@ -120,11 +143,11 @@ ul li img {
 }
 
 .pop-up-modal {
-  display: none;
+  display: block;
 }
 
 .confirm-message {
-  display: block;
+  display: none;
 }
 
 .image-mobile {
@@ -175,6 +198,7 @@ ul li img {
   height: 56px;
   font-size: 15px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 675px) {
@@ -194,29 +218,48 @@ ul li img {
     width: 100%;
   }
   .column-1 {
-    width: 100%;
+    width: 90%;
     padding: 1em !important;
   }
   .column-1 h1 {
     width: auto;
-    font-size: 25px !important;
+    font-size: 35px !important;
     padding: 0;
-    width: 100px;
+    width: 100%;
+  }
+  .column-1 ul {
+    width: 100%;
   }
   .column-1 button {
-    width: 250px;
+    width: 100%;
     height: 45px;
   }
   .column-1 input {
-    width: 250px;
+    width: 100%;
     padding-left: 0;
     height: 45px;
   }
+  .column-1 input::-webkit-input-placeholder {
+    padding-left: 2em;
+  }
+  .column-1 input::-moz-placeholder {
+    padding-left: 2em;
+  }
+  .column-1 input:-ms-input-placeholder {
+    padding-left: 2em;
+  }
+  .column-1 input::-ms-input-placeholder {
+    padding-left: 2em;
+  }
+  .column-1 input::placeholder {
+    padding-left: 2em;
+  }
   .column-1 p {
     font-size: 13px;
-    max-width: 200px;
+    max-width: 300px;
   }
   .column-1 li {
+    line-height: 20px;
     font-size: 12px;
     max-width: 200px;
   }

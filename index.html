@@ -51,9 +51,12 @@
               much more!
             </li>
           </ul>
-          <form>
-            <p>Email address</p>
-            <input placeholder="email@company.com" />
+          <form class="form">
+            <div class="email-messages">
+              <p>Email address</p>
+              <p class="alert-message">Valid email required</p>
+            </div>
+            <input class="input" placeholder="email@company.com" />
             <button>Subscribe to monthly newsletter</button>
           </form>
         </div>
@@ -85,10 +88,17 @@
           <a href="ash@loremcompany.com">ash@loremcompany.com</a>. Please open
           it and click the button inside to confirm your subscription.
         </p>
-        <button>Dismiss message</button>
+        <form action="/">
+          <label name="dismiss"></label>
+          <button name="dismiss" type="button" class="dismiss-message">
+            Dismiss message
+          </button>
+        </form>
       </div>
     </dialog>
 
     <!-- Success message end -->
   </body>
 </html>
+<script src="jquery.js"></script>
+<script src="app.js"></script>
