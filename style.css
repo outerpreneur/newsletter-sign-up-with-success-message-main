@@ -1,0 +1,116 @@
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+button,
+input,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(234, 29%, 20%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.pop-up-modal {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 36px;
+  height: 641px;
+  width: 928px;
+  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: hsl(234, 29%, 20%);
+}
+
+.pop-up-modal .column-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 75px 50px;
+  gap: 24px;
+}
+.pop-up-modal .column-1 h1 {
+  font-size: 54px;
+  font-weight: 700px;
+}
+.pop-up-modal .column-1 p {
+  margin-top: 10px;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form input {
+  border: 1px gray solid;
+  height: 56px;
+  border-radius: 5px;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+form button {
+  margin-top: 15px;
+  border: none;
+  height: 56px;
+  border-radius: 5px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(234, 29%, 20%);
+}
+
+.pop-up-modal .column-2 img {
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+ul li img {
+  margin-right: 10px;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}

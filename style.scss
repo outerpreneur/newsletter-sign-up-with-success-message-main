@@ -1,0 +1,108 @@
+// ## Colors
+
+$tomato-color: hsl(4, 100%, 67%);
+$dark-slate-grey: hsl(234, 29%, 20%);
+$charcoal-grey: hsl(235, 18%, 26%);
+$Grey: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+
+// Typography
+
+$font-roboto: "Roboto", sans-serif;
+$font-size: 16px;
+$heavy-text: 700px;
+$medium-text: 400px;
+$font-size: 16px;
+
+// Reset
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+button,
+input,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $dark-slate-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: $font-roboto;
+}
+
+.pop-up-modal {
+  background-color: $white;
+  border-radius: 36px;
+  height: 641px;
+  width: 928px;
+  padding: 24px;
+  display: flex;
+  color: $dark-slate-grey;
+}
+
+.pop-up-modal .column-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 75px 50px;
+  gap: 24px;
+
+  h1 {
+    font-size: 54px;
+    font-weight: $heavy-text;
+  }
+  p {
+    margin-top: 10px;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  border: 1px gray solid;
+  height: 56px;
+  border-radius: 5px;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+form button {
+  margin-top: 15px;
+  border: none;
+  height: 56px;
+  border-radius: 5px;
+  color: $white;
+  background-color: $dark-slate-grey;
+}
+
+.pop-up-modal .column-2 img {
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+ul li img {
+  margin-right: 10px;
+  transform: translateY(5px);
+}
