@@ -6,7 +6,7 @@ h4,
 p,
 li,
 button,
-input,
+input dialog,
 figure,
 figcaption,
 blockquote,
@@ -36,6 +36,9 @@ body {
   border-radius: 36px;
   height: 641px;
   width: 928px;
+}
+
+.inner-pop-up-modal {
   padding: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,6 +93,7 @@ form button {
   border-radius: 5px;
   color: hsl(0, 0%, 100%);
   background-color: hsl(234, 29%, 20%);
+  font-weight: bold;
 }
 
 .pop-up-modal .column-2 img {
@@ -113,4 +117,125 @@ ul li img {
   margin-right: 10px;
   -webkit-transform: translateY(5px);
           transform: translateY(5px);
+}
+
+.pop-up-modal {
+  display: none;
+}
+
+.confirm-message {
+  display: block;
+}
+
+.image-mobile {
+  display: none;
+}
+
+.inner-confirm-message {
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(0, 0%, 100%);
+  padding: 48px 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 36px;
+}
+
+.confirm-message img {
+  width: 64px;
+}
+
+.confirm-message h1 {
+  font-size: 54px;
+  max-width: 400px;
+}
+
+.confirm-message p {
+  max-width: 450px;
+}
+
+.confirm-message a {
+  text-decoration: none;
+  color: hsl(234, 29%, 20%);
+  font-weight: bold;
+  display: inline;
+}
+
+.confirm-message button {
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  height: 56px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 675px) {
+  .pop-up-modal {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 0;
+    border-radius: 0;
+  }
+  .inner-pop-up-modal {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 0;
+    width: 100%;
+  }
+  .column-1 {
+    width: 100%;
+    padding: 1em !important;
+  }
+  .column-1 h1 {
+    width: auto;
+    font-size: 25px !important;
+    padding: 0;
+    width: 100px;
+  }
+  .column-1 button {
+    width: 250px;
+    height: 45px;
+  }
+  .column-1 input {
+    width: 250px;
+    padding-left: 0;
+    height: 45px;
+  }
+  .column-1 p {
+    font-size: 13px;
+    max-width: 200px;
+  }
+  .column-1 li {
+    font-size: 12px;
+    max-width: 200px;
+  }
+  .column-2 {
+    height: 30%;
+    background-color: red;
+  }
+  .column-2 .image-mobile {
+    display: block;
+    width: 100%;
+  }
+  .column-2 .image-desktop {
+    display: none;
+  }
+  .inner-confirm-message {
+    height: 100vh;
+    padding: 1em;
+  }
+  .confirm-message h1 {
+    font-size: 25px;
+  }
 }

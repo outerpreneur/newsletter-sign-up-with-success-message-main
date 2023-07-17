@@ -26,47 +26,67 @@
   <body>
     <!-- Sign-up form start -->
 
-    <div class="pop-up-modal">
-      <div class="column-1">
-        <h1>Stay updated!</h1>
+    <dialog class="pop-up-modal">
+      <div class="inner-pop-up-modal">
+        <div class="column-1">
+          <h1>Stay updated!</h1>
 
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
 
-        <ul>
-          <li>
-            <img class="icon-list" src="./assets/images/icon-list.svg" />Product
-            discovery and building what matters
-          </li>
-          <li>
-            <img
-              class="icon-list"
-              src="./assets/images/icon-list.svg"
-            />Measuring to ensure updates are a success
-          </li>
-          <li>
-            <img class="icon-list" src="./assets/images/icon-list.svg" />And
-            much more!
-          </li>
-        </ul>
-        <form>
-          <p>Email address</p>
-          <input placeholder="email@company.com" />
-          <button>Subscribe to monthly newsletter</button>
-        </form>
+          <ul>
+            <li>
+              <img
+                class="icon-list"
+                src="./assets/images/icon-list.svg"
+              />Product discovery and building what matters
+            </li>
+            <li>
+              <img
+                class="icon-list"
+                src="./assets/images/icon-list.svg"
+              />Measuring to ensure updates are a success
+            </li>
+            <li>
+              <img class="icon-list" src="./assets/images/icon-list.svg" />And
+              much more!
+            </li>
+          </ul>
+          <form>
+            <p>Email address</p>
+            <input placeholder="email@company.com" />
+            <button>Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+        <div class="column-2">
+          <img
+            class="image-desktop"
+            src="./assets/images/illustration-sign-up-desktop.svg"
+            alt=""
+          />
+          <img
+            class="image-mobile"
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt=""
+          />
+        </div>
       </div>
-      <div class="column-2">
-        <img src="./assets/images/illustration-sign-up-desktop.svg" alt="" />
-      </div>
-    </div>
+    </dialog>
 
     <!-- Sign-up form end -->
 
     <!-- Success message start -->
 
-    <dialog>
-      Thanks for subscribing! A confirmation email has been sent to
-      ash@loremcompany.com. Please open it and click the button inside to
-      confirm your subscription. Dismiss message
+    <dialog class="confirm-message">
+      <div class="inner-confirm-message">
+        <img src="./assets/images/icon-success.svg" />
+        <h1>Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to
+          <a href="ash@loremcompany.com">ash@loremcompany.com</a>. Please open
+          it and click the button inside to confirm your subscription.
+        </p>
+        <button>Dismiss message</button>
+      </div>
     </dialog>
 
     <!-- Success message end -->

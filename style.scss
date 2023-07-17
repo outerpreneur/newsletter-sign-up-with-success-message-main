@@ -23,7 +23,7 @@ h4,
 p,
 li,
 button,
-input,
+input dialog,
 figure,
 figcaption,
 blockquote,
@@ -47,6 +47,9 @@ body {
   border-radius: 36px;
   height: 641px;
   width: 928px;
+}
+
+.inner-pop-up-modal {
   padding: 24px;
   display: flex;
   color: $dark-slate-grey;
@@ -88,6 +91,7 @@ form button {
   border-radius: 5px;
   color: $white;
   background-color: $dark-slate-grey;
+  font-weight: bold;
 }
 
 .pop-up-modal .column-2 img {
@@ -105,4 +109,129 @@ ul {
 ul li img {
   margin-right: 10px;
   transform: translateY(5px);
+}
+
+// visually hidden {
+.pop-up-modal {
+  display: none;
+}
+
+.confirm-message {
+  display: block;
+}
+
+.image-mobile {
+  display: none;
+}
+
+// confirm message
+
+.inner-confirm-message {
+  font-family: $font-roboto;
+  background-color: $white;
+  padding: 48px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  border-radius: 36px;
+}
+
+.confirm-message img {
+  width: 64px;
+}
+
+.confirm-message h1 {
+  font-size: 54px;
+  max-width: 400px;
+}
+
+.confirm-message p {
+  max-width: 450px;
+}
+
+.confirm-message a {
+  text-decoration: none;
+  color: $dark-slate-grey;
+  font-weight: bold;
+  display: inline;
+}
+
+.confirm-message button {
+  background-color: $dark-slate-grey;
+  color: $white;
+  height: 56px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+// responsive media
+
+@media screen and (max-width: 675px) {
+  .pop-up-modal {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 0;
+    border-radius: 0;
+  }
+
+  .inner-pop-up-modal {
+    flex-direction: column-reverse;
+    padding: 0;
+    width: 100%;
+  }
+
+  .column-1 {
+    width: 100%;
+    padding: 1em !important;
+
+    h1 {
+      width: auto;
+      font-size: 25px !important;
+      padding: 0;
+      width: 100px;
+    }
+
+    button {
+      width: 250px;
+      height: 45px;
+    }
+    input {
+      width: 250px;
+      padding-left: 0;
+      height: 45px;
+    }
+    p {
+      font-size: 13px;
+      max-width: 200px;
+    }
+    li {
+      font-size: 12px;
+      max-width: 200px;
+    }
+  }
+
+  .column-2 {
+    height: 30%;
+    background-color: red;
+  }
+
+  .column-2 .image-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .column-2 .image-desktop {
+    display: none;
+  }
+
+  .inner-confirm-message {
+    height: 100vh;
+    padding: 1em;
+  }
+
+  .confirm-message h1 {
+    font-size: 25px;
+  }
 }
