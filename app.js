@@ -4,6 +4,9 @@ const popup = $(".pup-up-modal");
 const confirmMessage = $(".confirm-message");
 const dismissMessage = $(".dismiss-message");
 
+// const emailVal = $("input").val();
+// const charCount = emailVal.length;
+
 console.log(emailValue);
 
 function validateEmail(email) {
@@ -27,17 +30,31 @@ $("form").on("submit", function (event) {
   }
 });
 
-$("input").on("keyup", function (event) {
-  const emailVal = email.val();
-  console.log($(this).val().lenght);
-  if ($(email.val().lenght()) < 1) {
-    console.log("works?");
-    $(".alert-message").show();
-    $(".alert-message").text("Cant't leave empty");
-  }
-});
+// $("input").on("keyup", function (event) {
+//   const emailVal = email.val();
+//   if ($(email.val().lenght()) < 1) {
+//     console.log("works?");
+//     $(".alert-message").show();
+//     $(".alert-message").text("Cant't leave empty");
+//   }
+// });
 
 $(".dismiss-message").on("click", function (event) {
   event.preventDefault();
   $(".confirm-message").hide();
+});
+
+$("input").on("keyup", function (event) {
+  const emailVal = $(this).val();
+  const charCount = emailVal.length;
+  console.log("Email value: " + emailVal);
+  console.log("Number of characters: " + charCount);
+
+  if (charCount < 1) {
+    console.log("works?");
+    $(".alert-message").show();
+    $(".alert-message").text("Cant't leave empty");
+  } else {
+    $(".alert-message").hide();
+  }
 });

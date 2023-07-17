@@ -111,6 +111,7 @@ form button {
   background-color: hsl(234, 29%, 20%);
   font-weight: bold;
   cursor: pointer;
+  padding-left: 1em;
 }
 
 form button:hover {
