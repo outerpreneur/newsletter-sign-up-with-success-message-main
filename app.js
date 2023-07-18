@@ -35,10 +35,11 @@ $(".dismiss-message").on("click", function (event) {
 $("input").on("keyup", function (event) {
   const emailVal = $(this).val();
   const charCount = emailVal.length;
-
   if (charCount < 1) {
     $(".alert-message").show();
     $(".alert-message").text("Cant't leave empty");
+  } else if (event.key == "Enter") {
+    validateEmail();
   } else {
     $(".alert-message").hide();
   }
